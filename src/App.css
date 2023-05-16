@@ -1,0 +1,113 @@
+#root {
+  max-width: 1280px;
+}
+
+.contenedorFormulario{
+  background-color: #ffffff;
+  width:900px;
+  min-height: 70vh;
+  border-radius:20px 20px 150px 20px;
+}
+.formulario{
+  display:flex;
+  flex-wrap: wrap;
+  padding:50px;
+}
+.itemFormulario{
+  display: flex;
+  flex:10%;
+  flex-direction: column;
+}
+.itemFormulario > label{
+  letter-spacing: 2px;
+  color:#8f8f8f;
+  font-weight: bold;
+  font-size: .6em;
+}
+.itemFormulario > input {
+  border:0.5px solid #d4d1d1;
+  border-radius: 10px;
+  width:50%;
+  height: 50px;
+  color:#8f8f8f;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 20px;
+  outline: none;
+}
+#itemError > label{
+  color:var(--rojo);
+}
+#itemError > input{
+  border:0.5px solid var(--rojo);
+}
+#itemError > span{
+  font-family: 'poppins-italic';
+  color:var(--rojo);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.itemFormulario > input:focus{
+  border:0.5px solid var(--morado);
+}
+
+/* SEPARADOR */
+
+.separador{
+  position:relative;
+  width:100%;
+  margin:auto;
+  display:flex;
+  align-items: center;
+}
+.separador > div{
+  flex:80%;
+}
+.separador hr{
+  border:0.5px solid #e2dddd;
+}
+.separador > button{
+  background: var(--morado);
+  width:60px;
+  height: 60px;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+}
+.separador > button > img{
+  width: auto;
+  height:30px;
+}
+.separador > button:hover{
+  background-color: #000;
+}
+
+@media (max-width: 420px){
+  .contenedorFormulario{
+    margin:auto;
+    width:90%;
+    min-height: 60vh;
+    max-height: 70vh;
+  }
+  .itemFormulario > input{
+    font-size: 1em;
+    padding-left: 6px;
+    width: 70%;
+    height: 40px;
+  }
+  .separador{
+    padding: 50px 0 0 0;
+  }
+  .separador > button{
+    position: absolute;
+    left:40%;
+  }
+  #itemError > span{
+    font-size: .6em;
+  }
+  
+}
