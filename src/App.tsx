@@ -8,7 +8,7 @@ import Form from './components/form/Form'
 function App() {
 
   const [years, setYears] = useState<null | number>(null)
-  const [days, setDays] = useState<null | number>(null)
+  const [days, setDays] = useState<null | number>(null) 
   const [months, setMonths] = useState<null | number>(null)
 
   return (
